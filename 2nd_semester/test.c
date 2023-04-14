@@ -2,6 +2,6 @@
 
 int main(void) {
     int x = 5;
-    int *y = *x; 
+    int *y = &x; 
     printf("x = %d", *y);
 }
