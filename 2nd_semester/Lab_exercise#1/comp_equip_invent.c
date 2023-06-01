@@ -52,7 +52,7 @@ int main(void) {
     }
 
     struct user user_1;
-    int item_no;
+    int item_no, quantity;
 
     // User input
     printf("Input name: ");
@@ -66,13 +66,17 @@ int main(void) {
     scanf("%d %d %d", &user_1.year, &user_1.month, &user_1.day);
 
     while (1) {
-        printf("\nEnter item number (1-5): ");
+        printf("\nEnter item number (1-5) Press 0 to exit: ");
         scanf("%d", &item_no);
 
         if (item_no > 5 || item_no < 1) {
             printf("Invalid item number\n");
             continue;
         } 
+
+        else if (item_no == 0) {
+            break;
+        }
         
         else {
             printf("Item name: %s\n", eqp[item_no - 1].item_name);
@@ -80,7 +84,25 @@ int main(void) {
             printf("Item description: %s\n", eqp[item_no - 1].item_description);
             printf("Item unit price: %d\n", eqp[item_no - 1].unit_price);
             printf("Item available quantity: %d\n", eqp[item_no - 1].avail_quantity);
-            continue;
+
+            printf("\nInsert quantities to be borrowed: ");
+            scanf("%d", &quantity);
+
+            if (quantity > eqp[item_no - 1].avail_quantity) {
+                printf("Not enough quantity\n");
+                continue;
+            }
+
+            else {
+                eqp[item_no - 1].avail_quantity -= quantity;
+
+                printf("Item name: %s\n", eqp[item_no - 1].item_name);
+                printf("Item number: %d\n", eqp[item_no - 1].item_no);
+                printf("Item description: %s\n", eqp[item_no - 1].item_description);
+                printf("Item unit price: %d\n", eqp[item_no - 1].unit_price);
+                printf("Item available quantity: %d\n", eqp[item_no - 1].avail_quantity);
+                continue;
+            }
         }
 
     }
