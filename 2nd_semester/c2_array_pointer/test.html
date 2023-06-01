@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+        <meta http-equiv="PRAGMA" content="NO-CACHE" />
+        <meta http-equiv="EXPIRES" content="Wed, 1 Jan 2014 00:00:01 GMT" />
+
+        <title>NHS Digital ODS Portal</title>
+
+        
+            <script src="/lib/jquery/dist/jquery.js"></script>
+            <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="/js/site.js?v=BxFAw9RUJ1E4NycpKEjCNDeoSvr4RPHixdBq5wDnkeY"></script>
+
+            <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+            <link rel="stylesheet" href="/css/site.css" />
+            <link rel="stylesheet" href="/css/open-iconic.css" />
+            <link rel="stylesheet" href="/css/open-iconic-bootstrap.css" />
+            <link rel="stylesheet" href="/css/PagedList.css" />
+        
+
+        <style id="antiClickjack" type="text/css">
+            body {
+                display: none;
+            }
+        </style>
+
+        <script type="text/javascript">
+            if (self === top) {
+                var antiClickjack = document.getElementById("antiClickjack");
+                antiClickjack.parentNode.removeChild(antiClickjack);
+            } else {
+                top.location = self.location;
+            }
+
+
+            function ShowProgressAnimation(returnValue) {
+                $("#loading-div-background").css('display', 'block');
+                $("#loading-div-background").css('visibility', 'visible');
+
+                var fileDownloadCheckTimer = window.setInterval(function () {
+                    setTimeout(function () { HideProgressAnimation(returnValue); }, 15000);
+                    clearInterval(fileDownloadCheckTimer);
+                }, 1);
+            }
+
+            function HideProgressAnimation(name) {
+                $("#loading-div-background").css('display', 'none');
+                $("#loading-div-background").css('visibility', 'hidden');
+                document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+            }
+        </script>
+    </head>
+<body>
+
+<div class="container">
+    <header id="header">
+        <div class="row">
+            <div class="col-lg-3 logo">
+                <a href="https://digital.nhs.uk/" target="_blank">
+                    <img src="/images/Logo-110x86.png" title="NHS Digital (opens in new window)." alt="NHS Digital main website (opens in new window)."/>
+                </a>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="application-name"><h1>ODS Portal</h1></div>
+                <div class="clearfix"></div>
+                <div class="float-right">
+                    <nav>
+                        <ul class="menu-options">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/Geographic/Search">Geographic Search</a></li>
+                            <li><a href="/Organisation/Search">Organisation/Practitioner Search</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+<div role="main">
+    <div class="container-fluid page-info-container">
+        <div class="container">
+            <div class="row page-info">
+                
+
+            <div class="row col-lg-12 pt-lg-3">
+                <h2>Organisation / Practitioner Search</h2>
+            </div>
+            <div class="row col-lg-12 pb-lg-2">
+                <h4>Showing details for General Medical Practitioner - BENJAMIN AE (G9313273)</h4>
+                <p> As a result of the Health and Care Act 2022 CCGs were statutorily abolished and are now referred to as Sub ICB Locations. However, the values of Clinical Commissioning Group and Clinical Commissioning Group Site will remain as the Primary Role and will continue to be displayed on these pages.</p>
+            </div>
+        
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid body-top-padding no-horizontal-padding">
+        <region>
+            
+<script>
+    function accordionClick(id) {
+
+        try {
+
+            var headerDiv = document.getElementById(id + '_header');
+            var bodyDiv = document.getElementById(id);
+            var span = document.getElementById(id + '_span');
+
+            if ($(bodyDiv).is('.collapse:not(.show)')) {
+                headerDiv.style.borderRadius = "10px 10px 0 0";
+                span.classList.remove('chevron-down');
+                span.classList.add('chevron-up');
+            } else {
+                headerDiv.style.borderRadius = "10px";
+                span.classList.remove('chevron-up');
+                span.classList.add('chevron-down');
+            }
+
+            var elements = document.getElementsByClassName('panel collapse show');
+            for (var i = 0; i < elements.length; i++) {
+                if (elements[i].id !== id) {
+                    var element = document.getElementById(elements[i].id);
+                    var elementHeader = document.getElementById(elements[i].id + '_header');
+                    var elementSpan = document.getElementById(elements[i].id + '_span');
+                    elementHeader.style.borderRadius = "10px";
+                    element.classList.remove("show");
+                    elementSpan.classList.remove('chevron-up');
+                    elementSpan.classList.add('chevron-down');
+                }
+            }
+        }
+        catch(err) {
+            //alert("error " + err);
+            console.error("accordionClick error " + err);
+        }
+
+    }
+</script>
+
+<div class="container">
+
+        <div class="row col-lg-12">
+            <h5>General Medical Practitioner - BENJAMIN AE (G9313273)</h5>
+        </div>
+
+        <div class="row margin-top-lg">
+
+            <div class="col-lg-3 control-label">
+                <label>GMC Code:</label>
+            </div>
+            <div class="col-lg-9">
+                2241117
+            </div>
+        </div>
+
+            <div class="row">
+                <div class="col-lg-3 control-label">
+                    <label>National Grouping:</label>
+                </div>
+                <div class="col-lg-9">
+                    <a href="/Organisation/OrganisationDetails?organisationId=282280&amp;showOpenChildredOnly=True" class="margin-right-sm">Y60 MIDLANDS COMMISSIONING REGION</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 control-label">
+                    <label>Higher Health Authority:</label>
+                </div>
+                <div class="col-lg-9">
+                    <a href="/Organisation/OrganisationDetails?organisationId=282154&amp;showOpenChildredOnly=True" class="margin-right-sm">QWU NHS COVENTRY AND WARWICKSHIRE INTEGRATED CARE BOARD</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 control-label">
+                    <label>Parent:</label>
+                </div>
+                <div class="col-lg-9">
+                    <a href="/Organisation/OrganisationDetails?organisationId=136606&amp;showOpenChildredOnly=True" class="margin-right-sm">M84034 WHITESTONE SURGERY</a>
+                </div>
+            </div>
+
+        <div class="row">
+            <div class="col-lg-3 control-label">
+                <label>Opened:</label>
+            </div>
+            <div class="col-lg-9">
+                10/12/1993
+            </div>
+        </div>
+
+
+<hr />
+
+<div class="row">
+    <div class="col-lg-3 control-label">
+        <label>Address:</label>
+    </div>
+
+<div class="col-lg-9">
+WHITESTONE SURGERY        <br />
+82 BULKINGTON LANE        <br />
+NUNEATON        <br />
+WARWICKSHIRE        <br />
+CV11 4SB        <br />
+</div>
+</div>
+
+<hr />
+
+<div id="details_children">
+
+        <a data-toggle="collapse" data-parent="#details_children" href="#practiceList">
+            <div id="practiceList_header" class="panel-header" onclick="accordionClick('practiceList')" onkeypress="accordionClick('practiceList')">
+                <h6>
+                    Practices
+                    <span id="practiceList_span" class="float-right chevron-down">&raquo;</span>
+                </h6>
+            </div>
+        </a>
+        <div id="practiceList" class="panel collapse">
+            
+<div class="container">
+    <div class="row search-results-header">
+
+        <div class="col-md-1">
+            <label>Code</label>
+        </div>
+
+        <div class="col-md-5">
+            <label>Name</label>
+        </div>
+
+        <div class="col-md-4">
+            <label>Address</label>
+        </div>
+        <div class="col-md-1">
+            <label>Joined</label>
+        </div>
+        <div class="col-md-1">
+            <label>Left</label>
+        </div>
+    </div>
+
+        <a href="/Organisation/OrganisationDetails?organisationId=136606">
+            <div class="row search-result-row">
+
+            <div class="col-lg-1  panel-list-text">
+                M84034
+            </div>
+
+            <div class="col-lg-5  panel-list-text">
+WHITESTONE SURGERY            </div>
+
+            <div class="col-lg-4 panel-list-text">
+                82 BULKINGTON LANE
+            </div>
+
+            <div class="col-lg-1 panel-list-text">
+                02/10/20
+            </div>
+
+            </div>
+        </a>
+        <a href="/Organisation/OrganisationDetails?organisationId=129366">
+            <div class="row search-result-row">
+
+            <div class="col-lg-1  panel-list-text">
+                M91008
+            </div>
+
+            <div class="col-lg-5  panel-list-text">
+LITTLE LONDON SURGERY            </div>
+
+            <div class="col-lg-4 panel-list-text">
+                LITTLE LONDON
+            </div>
+
+            <div class="col-lg-1 panel-list-text">
+                10/12/93
+            </div>
+
+                <div class="col-lg-1 panel-list-text">
+                    01/04/15
+                </div>
+            </div>
+        </a>
+    <p></p>
+</div>
+        </div>
+
+    <p></p>
+
+
+</div>
+</div>
+        </region>
+    </div>
+</div>
+    <div id="footer" class="container-fluid">
+        <footer>
+            <div class="row footer-div">
+                <div class="container">
+                    <div id="page-footer" class="row">
+                        <div class="col-lg-6 no-horizontal-padding">
+                            <div class="strap-line"></div>
+                        </div>
+                        <div class="col-lg-3 no-horizontal-padding">
+                            <h3>Contact Us</h3>
+                            <p>
+                                If you have any questions or concerns regarding this data, please contact our helpdesk: <b><i><a href="mailto:exeter.helpdesk@nhs.net">exeter.helpdesk@nhs.net</a></i></b>
+                            </p>
+                            <p>
+                                &nbsp;
+                            </p>
+                        </div>
+                        <div class="col-lg-3 no-horizontal-padding">
+                            <img src="/images/ContactUs.jpg" alt="" />
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="footer-cookie-bar">
+                Cookie Notice: Please note that we do not collect or use cookies on this site
+            </div>
+
+            <div id="footer-legal-bar">
+                <a href="https://digital.nhs.uk/legal" target="_blank" class="margin-left-md font-white">Legal</a>
+                <a href="https://digital.nhs.uk/privacy-and-cookies" target="_blank" class="margin-left-md font-white">Privacy and cookies</a>
+                <a href="https://digital.nhs.uk/terms-and-conditions" target="_blank" class="margin-left-md font-white">Terms and conditions</a>
+                <a class="margin-left-md font-white" href="/Home/Accessibility">Accessibility</a>
+            </div>
+        </footer>
+    </div>
+
+    <div id="loading-div-background">
+        <div id="loading-div">
+            <img style="height:60px;margin:30px;" src="/images/Loading.gif" alt="Loading.." />
+            <h2 style="color:gray;font-weight:normal;">Please wait....</h2>
+        </div>
+    </div>
+
+    
+</body>
+</html>
