@@ -10,10 +10,10 @@ struct library {
 };
 
 struct library lib[5];
+int choice, i = 0;
 
 int main(void) {
     // init
-    int choice, i = 0;
     char temp[20];
 
     while (1) {
@@ -127,5 +127,17 @@ int main(void) {
             printf("Invalid input. Exiting...\n");
             break;
         }
+    }
+}
+
+void print_library(int i, struct library lib[]) {
+    for (int j = 0; j <= i; j++) {
+        printf("\nBook %d\n", j + 1);
+        printf("Title: %s\n", lib[j].title);
+        printf("Author: %s\n", lib[j].author);
+        printf("Borrower: %s\n", lib[j].borrower);
+        printf("Days borrowed: %d\n", lib[j].days_borrowed);
+        printf("Fine: %d\n", lib[j].fine);
+        getchar();
     }
 }
